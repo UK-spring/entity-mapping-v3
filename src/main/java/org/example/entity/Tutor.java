@@ -2,6 +2,9 @@ package org.example.entity;
 
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
 @Table(name = "tutor")
 public class Tutor {
@@ -19,6 +22,14 @@ public class Tutor {
     @OneToOne
     @JoinColumn(name = "address_id", unique = true)
     private Address address;
+
+    @ManyToMany
+    @JoinTable(
+            name = "tutor_language",
+            joinColumns = @JoinColumn(name = "tutor_id"),
+            inverseJoinColumns = @JoinColumn(name = "language_id")
+    )
+    private List<Language> languages = new ArrayList<>();
 
     public Tutor() {
     }
