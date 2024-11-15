@@ -15,7 +15,10 @@ public class Language {
 
     private String name;
 
-    @ManyToMany(mappedBy = "languages")
-    private List<Tutor> tutors = new ArrayList<>();
+//    @ManyToMany(mappedBy = "languages")
+//    private List<Tutor> tutors = new ArrayList<>();
+
+//    @OneToMany(mappedBy = "language")
+//    private List<TutorLanguage> tutorLanguages = new ArrayList<>();
 
 }

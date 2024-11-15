@@ -31,6 +31,9 @@ public class Tutor {
     )
     private List<Language> languages = new ArrayList<>();
 
+//    @OneToMany(mappedBy = "tutor")
+//    private List<TutorLanguage> tutorLanguages = new ArrayList<>();
+
     public Tutor() {
     }
 
